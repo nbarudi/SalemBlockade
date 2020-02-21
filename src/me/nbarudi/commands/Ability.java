@@ -29,12 +29,12 @@ public class Ability extends BukkitCommand {
 		}
 		
 		if(args.length < 2) {
-			sender.sendMessage(ChatColor.RED + "Please do not use this command. it is all handled for you at night.");
+			sender.sendMessage(ChatColor.RED + "Please do not use this command. It is all handled for you at night.");
 			return false;
 		}
 		
 		if(!args[1].equals(TownOfSalem.key)) {
-			sender.sendMessage(ChatColor.RED + "Please do not use this command. it is all handled for you at night.");
+			sender.sendMessage(ChatColor.RED + "Please do not use this command. It is all handled for you at night.");
 			return false;
 		}
 		
@@ -109,7 +109,7 @@ public class Ability extends BukkitCommand {
 		}else if(pr.dayra == RoleAbilities.REVEAL) {
 			// To Do: set up reveal ability
 		}else {
-			Bukkit.getPlayer(t.getName()).sendMessage("Sorry, Semes that we do not have your roles ability registered yet! Please contact nbarudi#5837 if you got this error.");
+			Bukkit.getPlayer(t.getName()).sendMessage("Sorry, it seems that we do not have your roles ability registered yet! Please contact nbarudi#5837 if you got this error.");
 		}
 	}
 

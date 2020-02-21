@@ -36,7 +36,7 @@ public class Admin extends BukkitCommand {
 		
 		Player t = Bukkit.getPlayer(args[0]);
 		if(t == null) {
-			sender.sendMessage("§4Could not find the player: " + args[0]);
+			sender.sendMessage("Â§4Could not find the player: " + args[0]);
 			return false;
 		}
 		
@@ -47,10 +47,10 @@ public class Admin extends BukkitCommand {
 			if(CheckPermissions.checkPerms((Player)sender, 3)) {
 				ConfigManager.getRankData().set("Players." + t.getName() + ".Rank", "Admin");
 				ConfigManager.ranksSave();
-				Announcements.dmAnnounce("§aSet player §b" + t.getName() + " §ato rank §cAdmin", (Player)sender);
-				Announcements.dmAnnounce("§aYou have been set to rank §cAdmin §aby player §b" + sender.getName(), t);
+				Announcements.dmAnnounce("Â§aSet player Â§b" + t.getName() + " Â§ato rank Â§cAdmin", (Player)sender);
+				Announcements.dmAnnounce("Â§aYou have been set to rank Â§cAdmin Â§aby player Â§b" + sender.getName(), t);
 			}else {
-				sender.sendMessage("§4Sorry! You do not have permission to make players an admin!");
+				sender.sendMessage("Â§4Sorry! You do not have permission to make players an admin!");
 			}
 			return false;
 		}
@@ -58,10 +58,10 @@ public class Admin extends BukkitCommand {
 			if(CheckPermissions.checkPerms((Player)sender, 2)) {
 				ConfigManager.getRankData().set("Players." + t.getName() + ".Rank", "Host");
 				ConfigManager.ranksSave();
-				Announcements.dmAnnounce("§aSet player §b" + t.getName() + " §ato rank §cHost", (Player)sender);
-				Announcements.dmAnnounce("§aYou have been set to rank §cHost §aby player §b" + sender.getName(), t);
+				Announcements.dmAnnounce("Â§aSet player Â§b" + t.getName() + " Â§ato rank Â§cHost", (Player)sender);
+				Announcements.dmAnnounce("Â§aYou have been set to rank Â§cHost Â§aby player Â§b" + sender.getName(), t);
 			}else {
-				sender.sendMessage("§4Sorry! You do not have permission to make players a host!");
+				sender.sendMessage("Â§4Sorry! You do not have permission to make players a host!");
 			}
 			return false;
 		}
@@ -73,10 +73,10 @@ public class Admin extends BukkitCommand {
 			if(args[2].equals(TownOfSalem.key)) {
 				ConfigManager.getRankData().set("Players." + t.getName() + ".Rank", "Manager");
 				ConfigManager.ranksSave();
-				Announcements.dmAnnounce("§aSet player §b" + t.getName() + " §ato rank §cManager", (Player)sender);
-				Announcements.dmAnnounce("§aYou have been set to rank §cManager §aby player §b" + sender.getName(), t);
+				Announcements.dmAnnounce("Â§aSet player Â§b" + t.getName() + " Â§ato rank Â§cManager", (Player)sender);
+				Announcements.dmAnnounce("Â§aYou have been set to rank Â§cManager Â§aby player Â§b" + sender.getName(), t);
 			}else {
-				sender.sendMessage("§4Sorry! Invalid Key!");
+				sender.sendMessage("Â§4Sorry! Invalid Key!");
 			}
 		}
 		

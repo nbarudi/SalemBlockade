@@ -30,12 +30,12 @@ public class Vote extends BukkitCommand {
 		}
 		
 		if(args.length < 2) {
-			sender.sendMessage(ChatColor.RED + "Please do not use this command. it is all handled for you at night.");
+			sender.sendMessage(ChatColor.RED + "Please do not use this command. It is all handled for you at night.");
 			return false;
 		}
 		
 		if(!args[1].equals(TownOfSalem.key)) {
-			sender.sendMessage(ChatColor.RED + "Please do not use this command. it is all handled for you at night.");
+			sender.sendMessage(ChatColor.RED + "Please do not use this command. It is all handled for you at night.");
 			return false;
 		}
 		
