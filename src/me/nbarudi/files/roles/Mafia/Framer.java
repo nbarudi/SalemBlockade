@@ -25,7 +25,6 @@ public class Framer extends Role {
 		
 		ArrayList<String> wincond = new ArrayList<String>();
 		wincond.add("§cMafia");
-		wincond.add("§6Survivor");
 		wincond.add("§5Witch");
 		
 		this.teamname = "§cMafia";
@@ -35,6 +34,7 @@ public class Framer extends Role {
 		this.winconditions = wincond;
 		this.team = ChatColor.RED;
 		this.ra = RoleAbilities.FRAME;
+		this.priority = 3;
 	}
 
 }

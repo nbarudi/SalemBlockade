@@ -31,6 +31,7 @@ public class SerialKiller extends Role {
 		this.winconditions = wincond;
 		this.team = ChatColor.DARK_BLUE;
 		this.ra = RoleAbilities.KILL;
+		this.priority = 5;
 	}
 
 }

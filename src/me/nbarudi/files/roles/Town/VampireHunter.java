@@ -26,7 +26,6 @@ public class VampireHunter extends Role{
 		
 		ArrayList<String> wincond = new ArrayList<String>();
 		wincond.add("§aTown");
-		wincond.add("§6Survivor");
 		
 		this.teamname = "§aTown\n(§bKilling§a)";
 		
@@ -35,6 +34,7 @@ public class VampireHunter extends Role{
 		this.winconditions = wincond;
 		this.team = ChatColor.GREEN;
 		this.ra = RoleAbilities.VAMPCHECK;
+		this.priority = 5;
 	}
 
 }

@@ -27,7 +27,6 @@ public class Janitor extends Role {
 		
 		ArrayList<String> wincond = new ArrayList<String>();
 		wincond.add("§cMafia");
-		wincond.add("§6Survivor");
 		wincond.add("§5Witch");
 		
 		this.teamname = "§cMafia";
@@ -37,6 +36,7 @@ public class Janitor extends Role {
 		this.winconditions = wincond;
 		this.team = ChatColor.RED;
 		this.ra = RoleAbilities.CLEAN;
+		this.priority = 3;
 	}
 
 }

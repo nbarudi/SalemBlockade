@@ -24,7 +24,6 @@ public class Doctor extends Role {
 		
 		ArrayList<String> wincond = new ArrayList<String>();
 		wincond.add("§aTown");
-		wincond.add("§6Survivor");
 		
 		this.teamname = "§aTown\n(§bProtective§a)";
 		
@@ -33,6 +32,7 @@ public class Doctor extends Role {
 		this.winconditions = wincond;
 		this.team = ChatColor.GREEN;
 		this.ra = RoleAbilities.HEAL;
+		this.priority = 3;
 	}
 
 }

@@ -10,6 +10,7 @@ public class Role {
 	public ChatColor team;
 	public int attack;
 	public int defense;
+	public int priority;
 	public ArrayList<String> attributes;
 	public ArrayList<String> abilities;
 	public ArrayList<String> winconditions;

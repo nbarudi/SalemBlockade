@@ -35,6 +35,7 @@ public class Witch extends Role {
 		this.team = ChatColor.DARK_PURPLE;
 		this.ra = RoleAbilities.CONTROL;
 		this.disabled = true;
+		this.priority = 2;
 	}
 
 }

@@ -23,7 +23,6 @@ public class Sheriff extends Role {
 		abil.add("You will know if your target is suspicious.");
 		
 		wincond.add("§aTown");
-		wincond.add("§6Survivor");
 		
 		this.teamname = "§aTown\n(§bInvestigative§a)";
 		this.attributes = atrib;
@@ -31,6 +30,7 @@ public class Sheriff extends Role {
 		this.winconditions = wincond;
 		this.team = ChatColor.GREEN;
 		this.ra = RoleAbilities.SUSCHECK;
+		this.priority = 4;
 	}
 
 }

@@ -32,6 +32,8 @@ public class Arsonist extends Role {
 		this.winconditions = wincond;
 		this.team = ChatColor.GOLD;
 		this.ra = RoleAbilities.DOUSEIGNITE;
+		/* Priority is a 3 when dousing, 5 while igniting */
+		this.priority = 3;
 	}
 
 }

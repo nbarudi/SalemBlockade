@@ -26,7 +26,6 @@ public class Transporter extends Role {
 		
 		ArrayList<String> wincond = new ArrayList<String>();
 		wincond.add("§aTown");
-		wincond.add("§6Survivor");
 		
 		this.teamname = "§aTown\n(§bSupport§a)";
 		
@@ -37,6 +36,7 @@ public class Transporter extends Role {
 		this.ra = RoleAbilities.SWAP;
 		this.disabled = true;
 		this.rbimmune = true;
+		this.priority = 1;
 	}
 
 }

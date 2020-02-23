@@ -32,6 +32,7 @@ public class Survivor extends Role {
 		this.winconditions = wincond;
 		this.team = ChatColor.GOLD;
 		this.ra = RoleAbilities.VEST;
+		this.priority = 3;
 	}
 
 }

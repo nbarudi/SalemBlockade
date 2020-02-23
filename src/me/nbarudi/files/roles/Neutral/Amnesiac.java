@@ -33,6 +33,7 @@ public class Amnesiac extends Role {
 		this.team = ChatColor.AQUA;
 		this.ra = RoleAbilities.REMEMBER;
 		this.disabled = true;
+		this.priority = 6;
 	}
 
 }

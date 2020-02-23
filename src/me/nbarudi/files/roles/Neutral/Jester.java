@@ -31,6 +31,7 @@ public class Jester extends Role {
 		this.winconditions = wincond;
 		this.team = ChatColor.LIGHT_PURPLE;
 		this.ra = RoleAbilities.PUNISH;
+		this.priority = 1;
 	}
 
 }

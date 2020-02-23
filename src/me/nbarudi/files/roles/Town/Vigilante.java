@@ -33,6 +33,7 @@ public class Vigilante extends Role{
 		this.winconditions = wincond;
 		this.team = ChatColor.GREEN;
 		this.ra = RoleAbilities.KILL;
+		this.priority = 5;
 	}
 
 }

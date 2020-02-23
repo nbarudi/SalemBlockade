@@ -24,8 +24,7 @@ public class Bodyguard extends Role{
 		atrib.add("You man only wear a bulletproof vest once");
 		
 		ArrayList<String> wincond = new ArrayList<String>();
-                wincond.add("�aTown");
-		wincond.add("�6Survivor");
+        wincond.add("�aTown");
 		
 		this.teamname = "�aTown\n(�bProtective�a)";
 		
@@ -34,7 +33,7 @@ public class Bodyguard extends Role{
 		this.winconditions = wincond;
 		this.team = ChatColor.GREEN;
 		this.ra = RoleAbilities.GUARD;
-		
+		this.priority = 3;
 	}
 
 }

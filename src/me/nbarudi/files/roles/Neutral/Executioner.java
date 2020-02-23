@@ -29,6 +29,8 @@ public class Executioner extends Role {
 		this.abilities = abil;
 		this.winconditions = wincond;
 		this.team = ChatColor.GRAY;
+		// Does not visit, hence no priority
+		this.priority = 0;
 	}
 
 }

@@ -22,7 +22,6 @@ public class Lookout extends Role {
 		
 		ArrayList<String> wincond = new ArrayList<String>();
 		wincond.add("§aTown");
-		wincond.add("§6Survivor");
 		
 		this.teamname = "§aTown\n(§bInvestigative§a)";
 		this.team = ChatColor.GREEN;
@@ -31,7 +30,7 @@ public class Lookout extends Role {
 		this.abilities = abil;
 		this.winconditions = wincond;
 		this.ra = RoleAbilities.WATCH;
-		
+		this.priority = 4;
 		
 	}
 

@@ -25,7 +25,6 @@ public class Jailor extends Role {
 		
 		ArrayList<String> wincond = new ArrayList<String>();
 		wincond.add("§aTown");
-		wincond.add("§6Survivor");
 		
 		this.attributes = atrib;
 		this.abilities = abil;
@@ -37,6 +36,8 @@ public class Jailor extends Role {
 		this.unique = true;
 		this.ra = RoleAbilities.JAILKILL;
 		this.dayra = RoleAbilities.JAIL;
+		// 1 while jailing, 5 while executing
+		this.priority = 1;
 		
 	}
 

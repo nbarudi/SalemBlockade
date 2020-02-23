@@ -25,7 +25,6 @@ public class Mayor extends Role {
 		
 		ArrayList<String> wincond = new ArrayList<String>();
 		wincond.add("§aTown");
-		wincond.add("§6Survivor");
 		
 		this.teamname = "§aTown\n(§bSupport§a)";
 		
@@ -35,6 +34,8 @@ public class Mayor extends Role {
 		this.team = ChatColor.GREEN;
 		this.dayra = RoleAbilities.REVEAL;
 		this.disabled = true;
+		// Does not visit
+		this.priority = 0;
 	}
 
 }

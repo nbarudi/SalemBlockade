@@ -21,7 +21,6 @@ public class Mafioso extends Role{
 		
 		ArrayList<String> wincond = new ArrayList<String>();
 		wincond.add("§cMafia");
-		wincond.add("§6Survivor");
 		wincond.add("§5Witch");
 		
 		
@@ -34,6 +33,7 @@ public class Mafioso extends Role{
 		this.teamname = "§cMafia";
 		this.unique = true;
 		this.ra = RoleAbilities.KILL;
+		this.priority = 5;
 	}
 
 }

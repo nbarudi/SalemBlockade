@@ -26,7 +26,6 @@ public class Forger extends Role {
 		
 		ArrayList<String> wincond = new ArrayList<String>();
 		wincond.add("§cMafia");
-		wincond.add("§6Survivor");
 		wincond.add("§5Witch");
 		
 		this.teamname = "§cMafia";
@@ -37,6 +36,7 @@ public class Forger extends Role {
 		this.team = ChatColor.RED;
 		this.ra = RoleAbilities.FORGE;
 		this.disabled = true;
+		this.priority = 3;
 	}
 
 }
