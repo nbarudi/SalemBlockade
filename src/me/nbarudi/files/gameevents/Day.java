@@ -26,19 +26,31 @@ public class Day {
 	
 	public static void triggerNextDay() {
 		TownOfSalem.DayNumber++;
-		task = Bukkit.getScheduler().scheduleSyncRepeatingTask(TownOfSalem.instance, new Runnable() {
-			public void run() {
-				if(i >= 1) {
-					i = 0;
-					Bukkit.getScheduler().cancelTask(task);
-					//Trigger Voting
-					Voting.triggerVoting(task);
-				}else {
-					InfoManager.setBossBar("Day §b" + TownOfSalem.DayNumber+ "§r: Discussion.", i);
-					i = i + 0.01;
+		if (!checkForWin())
+		{
+			task = Bukkit.getScheduler().scheduleSyncRepeatingTask(TownOfSalem.instance, new Runnable() {
+				public void run() {
+					if(i >= 1) {
+						i = 0;
+						Bukkit.getScheduler().cancelTask(task);
+						//Trigger Voting
+						Voting.triggerVoting(task);
+					} else {
+							InfoManager.setBossBar("Day §b" + TownOfSalem.DayNumber+ "§r: Discussion.", i);
+							i = i + 0.01;
+					}
 				}
-			}
-		}, 20, 9);
+			}, 20, 9);
+		} else {
+			//To-do: Add code to end game
+		}
+	}
+
+	public static boolean checkForWin(){
+
+		
+
+		return false;
 	}
 
 }
