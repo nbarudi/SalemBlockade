@@ -16,6 +16,8 @@ public class ChatManager implements Listener{
 	@EventHandler
 	public void onAsyncChat(AsyncPlayerChatEvent event) {
 		
+		if(TownOfSalem.gameStarted == false) return;
+		
 		String message = event.getMessage();
 		Player player = event.getPlayer();
 		Player jailor = Bukkit.getPlayer(TownOfSalem.rplrs.get("Jailor"));
@@ -70,6 +72,10 @@ public class ChatManager implements Listener{
 				player.sendMessage("§a(Dead Chat): §3Medium: §b" + message);
 				for(Player p : TownOfSalem.dead) {
 					p.sendMessage("§a(Dead Chat): §3Medium: §b" + message);
+				}
+			}else {
+				for(Player p : Bukkit.getOnlinePlayers()) {
+					p.sendMessage("§a(" + p.getName() + "): §b" + message);
 				}
 			}
 		}
