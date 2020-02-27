@@ -43,11 +43,14 @@ public class AssignRoles {
 			if(r.unique && TownOfSalem.rplrs.containsKey(r)) continue;
 			
 			TownOfSalem.plrs.put(player.getName(), r);
-			TownOfSalem.rplrs.put(r, player.getName());
+			TownOfSalem.rplrs.put(r.name, player.getName());
 			unassigned.remove(player);
 			player.sendMessage(ChatColor.GREEN + "You are the " + r.team + r.name + "§a!");
 			Announcements.giveRoleInfo(r, player);
 			TownOfSalem.alive.add(player);
+			if(r.teamname == "§cMafia") {
+				TownOfSalem.mafia.add(player);
+			}
 			continue;
 		}
 		for(Randomized rand : random) {
@@ -78,12 +81,14 @@ public class AssignRoles {
 				if(r.unique && TownOfSalem.plrs.containsKey(r)) continue;
 				
 				TownOfSalem.plrs.put(player.getName(), r);
-				TownOfSalem.rplrs.put(r, player.getName());
+				TownOfSalem.rplrs.put(r.name, player.getName());
 				unassigned.remove(player);
 				player.sendMessage(ChatColor.GREEN + "You are the " + r.team + r.name + "§a!");
 				Announcements.giveRoleInfo(r, player);
 				TownOfSalem.alive.add(player);
-				
+				if(r.teamname == "§cMafia") {
+					TownOfSalem.mafia.add(player);
+				}
 				continue;
 			}
 			continue;

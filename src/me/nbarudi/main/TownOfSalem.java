@@ -59,6 +59,7 @@ import me.nbarudi.files.roles.Town.Transporter;
 import me.nbarudi.files.roles.Town.VampireHunter;
 import me.nbarudi.files.roles.Town.Veteran;
 import me.nbarudi.files.roles.Town.Vigilante;
+import me.nbarudi.gamesystems.ChatManager;
 import me.nbarudi.gamesystems.host.HostTemplate;
 import me.nbarudi.gamesystems.host.ListAbilities;
 import me.nbarudi.gamesystems.host.ListVisits;
@@ -84,10 +85,14 @@ public class TownOfSalem extends JavaPlugin {
 	
 	//Player Managment
 	public static Map<String, Role> plrs = new HashMap<String, Role>();
-	public static Map<Role, String> rplrs = new HashMap<Role, String>();
+	public static Map<String, String> rplrs = new HashMap<String, String>();
 	public static ArrayList<Player> alive = new ArrayList<Player>();
 	public static ArrayList<Player> spectators = new ArrayList<Player>();
+	public static ArrayList<Player> mafia = new ArrayList<Player>();
+	public static ArrayList<Player> dead = new ArrayList<Player>();
+	public static ArrayList<Player> blackmailed = new ArrayList<Player>();
 	public static Player onStand;
+	public static Player jailed;
 	
 	//Global Values
 	public static int DayNumber = 0;
@@ -95,6 +100,7 @@ public class TownOfSalem extends JavaPlugin {
 	public static boolean isDefending = false;
 	public static GameMode gm = new Classic("Classic");
 	public static boolean gameStarted = false;
+	public static boolean isNight = false;
 	
 	//Instances
 	public static Plugin instance;
@@ -164,9 +170,11 @@ public class TownOfSalem extends JavaPlugin {
 		pm.registerEvents(new InventoryInteract(), this);
 		pm.registerEvents(new PlayerChat(), this);
 		pm.registerEvents(new SignBook(), this);
+		pm.registerEvents(new ChatManager(), this);
 		
 		//Game Related Events
 		pm.registerEvents(new Judgement(), this);
+		
 		
 		//Ability Events
 		pm.registerEvents(new KillHandler(), this);

@@ -10,6 +10,7 @@ public class Night {
 	public static int task = 0;
 	public static double i = 0;
 	public static void triggerNextNight() {
+		TownOfSalem.isNight = true;
 		TownOfSalem.NightNumber++;
 		task = Bukkit.getScheduler().scheduleSyncRepeatingTask(TownOfSalem.instance, new Runnable() {
 			public void run() {
@@ -18,6 +19,7 @@ public class Night {
 					Day.triggerNextDay();
 					Bukkit.getScheduler().cancelTask(task);
 					countdown = false;
+					TownOfSalem.isNight = false;
 				}else {
 					if(!countdown) {
 						InfoManager.setBossBar("Night §b "+ TownOfSalem.NightNumber +"§r.", 1 - i);
