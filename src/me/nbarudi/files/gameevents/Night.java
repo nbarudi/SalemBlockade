@@ -1,6 +1,7 @@
 package me.nbarudi.files.gameevents;
 
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 
 import me.nbarudi.main.TownOfSalem;
 import me.nbarudi.utils.InfoManager;
@@ -12,6 +13,7 @@ public class Night {
 	public static void triggerNextNight() {
 		TownOfSalem.isNight = true;
 		TownOfSalem.NightNumber++;
+		hidePlayers();
 		task = Bukkit.getScheduler().scheduleSyncRepeatingTask(TownOfSalem.instance, new Runnable() {
 			public void run() {
 				if(i >= 1) {
@@ -32,6 +34,34 @@ public class Night {
 			}
 		}, 100, 6);
 		
+	}
+	
+	public static void hidePlayers() {
+		
+		for(Player p : Bukkit.getOnlinePlayers()) {
+			for(Player t : Bukkit.getOnlinePlayers()) {
+				if(p == t) continue;
+				p.hidePlayer(TownOfSalem.instance, t);
+			}
+		}
+		
+		for(Player p : TownOfSalem.mafia) {
+			for(Player t : TownOfSalem.mafia) {
+				if(t == p) continue;
+				p.showPlayer(TownOfSalem.instance, t);
+			}
+		}
+		
+		
+	}
+	
+	public static void showPlayers() {
+		for(Player p : Bukkit.getOnlinePlayers()) {
+			for(Player t : Bukkit.getOnlinePlayers()) {
+				if(p == t) continue;
+				p.showPlayer(TownOfSalem.instance, t);
+			}
+		}
 	}
 
 }

@@ -26,6 +26,7 @@ public class Day {
 	
 	public static void triggerNextDay() {
 		TownOfSalem.DayNumber++;
+		Night.showPlayers();
 		if (!checkForWin())
 		{
 			task = Bukkit.getScheduler().scheduleSyncRepeatingTask(TownOfSalem.instance, new Runnable() {

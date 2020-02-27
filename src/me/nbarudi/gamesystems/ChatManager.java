@@ -75,7 +75,7 @@ public class ChatManager implements Listener{
 				}
 			}else {
 				for(Player p : Bukkit.getOnlinePlayers()) {
-					p.sendMessage("§a(" + p.getName() + "): §b" + message);
+					p.sendMessage("§a(" + player.getName() + "): §b" + message);
 				}
 			}
 		}
